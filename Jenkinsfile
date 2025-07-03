@@ -5,8 +5,8 @@ pipeline {
         stage('Setup') {
             steps {
                 bat '''
-                C:\\Users\\sidda\\AppData\\Local\\Programs\\Python\\Python310\\python.exe -m pip install --upgrade pip
-                C:\\Users\\sidda\\AppData\\Local\\Programs\\Python\\Python310\\Scripts\\pip.exe install -r requirements.txt
+                C:\\Users\\mdtal\\AppData\\Local\\Programs\\Python\\Python312\\python.exe -m pip install --upgrade pip
+                C:\\Users\\mdtal\\AppData\\Local\\Programs\\Python\\Python312\\python.exe -m pip install -r requirements.txt
                 '''
             }
         }
@@ -14,7 +14,7 @@ pipeline {
         stage('Run') {
             steps {
                 bat '''
-                C:\\Users\\sidda\\AppData\\Local\\Programs\\Python\\Python310\\python.exe app.py
+                C:\\Users\\mdtal\\AppData\\Local\\Programs\\Python\\Python312\\python.exe app.py
                 '''
             }
         }
@@ -25,4 +25,6 @@ pipeline {
             echo '❌ Build failed.'
         }
     }
+}
+
 }
